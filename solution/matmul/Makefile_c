@@ -1,0 +1,30 @@
+ifeq ($(COMP),gnu)
+	CC = gcc
+	FC = gfortran
+	CFLAGS =
+	OFLAGS = -fopenmp $(CFLAGS)
+	BIN = matmulc matmulc_omp
+else ifeq ($(COMP),intel)
+	CC = icc
+	FC = ifort
+	CFLAGS =
+	OFLAGS = -qopenmp $(CFLAGS)
+	BIN = matmulc matmulc_omp
+else
+	CC = nvc
+	FC = nvfortran
+	CFLAGS =
+	OFLAGS = -mp $(CFLAGS)
+	AFLAGS = -acc -gpu=cc75 -Minfo=accel $(CFLAGS)
+	BIN = matmulc matmulc_omp matmulc_acc
+endif
+
+all: $(BIN)
+matmulc:
+	$(CC) $(CFLAGS) -o matmulc matmul.c
+matmulc_omp:
+	$(CC) $(OFLAGS) -o matmulc_omp matmul_omp.c
+matmulc_acc:
+	$(CC) $(AFLAGS) -o matmulc_acc matmul_acc.c
+clean:
+	rm -rf *~ $(BIN)

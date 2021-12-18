@@ -1,0 +1,59 @@
+pi = 3.141592673590427
+time to compute =    0.313 seconds
+1
+pi = 3.141592673590427
+time to compute =    1.697 seconds
+2
+pi = 3.141592673590424
+time to compute =    4.433 seconds
+3
+pi = 3.141592673590215
+time to compute =    8.464 seconds
+4
+pi = 3.141592673590025
+time to compute =   17.346 seconds
+5
+pi = 3.141592673590288
+time to compute =   11.654 seconds
+6
+pi = 3.141592673589843
+time to compute =   33.169 seconds
+12
+pi = 3.141592673590440
+time to compute =   49.955 seconds
+24
+pi = 3.141592673590011
+time to compute =   28.310 seconds
+48
+pi = 3.141592673589542
+time to compute =  114.637 seconds
+
+1
+pi = 3.141592673590427
+time to compute =    0.311 seconds
+2
+pi = 3.141592673589910
+time to compute =    0.157 seconds
+3
+pi = 3.141592673589570
+time to compute =    0.105 seconds
+4
+pi = 3.141592673589683
+time to compute =    0.079 seconds
+5
+pi = 3.141592673589737
+time to compute =    0.063 seconds
+6
+pi = 3.141592673589645
+time to compute =    0.053 seconds
+12
+pi = 3.141592673589828
+time to compute =    0.027 seconds
+24
+pi = 3.141592673589783
+time to compute =    0.014 seconds
+48
+pi = 3.141592673589825
+time to compute =    0.015 seconds
+pi = 3.141592673589793
+time to compute =    0.028 seconds

@@ -1,0 +1,52 @@
+SAXPY Time: 0.504534
+Threads:   1  SAXPY Time: 0.599102
+Threads:   2  SAXPY Time: 0.300650
+Threads:   3  SAXPY Time: 0.234661
+Threads:   4  SAXPY Time: 0.150547
+Threads:   5  SAXPY Time: 0.120734
+Threads:   6  SAXPY Time: 0.100535
+Threads:   7  SAXPY Time: 0.085910
+Threads:   8  SAXPY Time: 0.075242
+Threads:   9  SAXPY Time: 0.066778
+Threads:  10  SAXPY Time: 0.060463
+Threads:  11  SAXPY Time: 0.054679
+Threads:  12  SAXPY Time: 0.050300
+Threads:  13  SAXPY Time: 0.046347
+Threads:  14  SAXPY Time: 0.043001
+Threads:  15  SAXPY Time: 0.040161
+Threads:  16  SAXPY Time: 0.037744
+Threads:  17  SAXPY Time: 0.035544
+Threads:  18  SAXPY Time: 0.033529
+Threads:  19  SAXPY Time: 0.031883
+Threads:  20  SAXPY Time: 0.030378
+Threads:  21  SAXPY Time: 0.029223
+Threads:  22  SAXPY Time: 0.027787
+Threads:  23  SAXPY Time: 0.026958
+Threads:  24  SAXPY Time: 0.026623
+Threads:  25  SAXPY Time: 0.025550
+Threads:  26  SAXPY Time: 0.024523
+Threads:  27  SAXPY Time: 0.023714
+Threads:  28  SAXPY Time: 0.023540
+Threads:  29  SAXPY Time: 0.022311
+Threads:  30  SAXPY Time: 0.041401
+Threads:  31  SAXPY Time: 0.020626
+Threads:  32  SAXPY Time: 0.029900
+Threads:  33  SAXPY Time: 0.020354
+Threads:  34  SAXPY Time: 0.025222
+Threads:  35  SAXPY Time: 0.018425
+Threads:  36  SAXPY Time: 0.019066
+Threads:  37  SAXPY Time: 0.018097
+Threads:  38  SAXPY Time: 0.032012
+Threads:  39  SAXPY Time: 0.031473
+Threads:  40  SAXPY Time: 0.030645
+Threads:  41  SAXPY Time: 0.030207
+Threads:  42  SAXPY Time: 0.024956
+Threads:  43  SAXPY Time: 0.029941
+Threads:  44  SAXPY Time: 0.030376
+Threads:  45  SAXPY Time: 0.035862
+Threads:  46  SAXPY Time: 0.037178
+Threads:  47  SAXPY Time: 0.026011
+Threads:  48  SAXPY Time: 0.025263
+SAXPY Time: 0.517426
+SAXPY Time: 0.009601
+SAXPY Time:        0.007846in secs

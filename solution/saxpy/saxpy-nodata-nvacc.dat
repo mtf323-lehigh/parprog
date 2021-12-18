@@ -1,0 +1,52 @@
+[2021-07-10 20:36.19] ~/Workshop/2021HPC/parprog/solution/saxpy
+[alp514.hawk-b624](1002): NV_ACC_TIME=1 ./saxpyf_acc-nodata
+SAXPY Time: 0.778822
+
+Accelerator Kernel Timing data
+/home/alp514/Workshop/2021HPC/parprog/solution/saxpy/saxpy_acc-nodata.f90
+  saxpy  NVIDIA  devicenum=0
+    time(us): 639,595
+    11: compute region reached 1 time
+        11: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=7,824 max=7,824 min=7,824 avg=7,824
+            elapsed time(us): total=7,872 max=7,872 min=7,872 avg=7,872
+    11: data region reached 2 times
+        16: data copyout transfers: 96
+             device time(us): total=243,594 max=2,558 min=1,751 avg=2,537
+    20: compute region reached 1 time
+        20: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=9,556 max=9,556 min=9,556 avg=9,556
+            elapsed time(us): total=9,605 max=9,605 min=9,605 avg=9,605
+    20: data region reached 2 times
+        20: data copyin transfers: 96
+             device time(us): total=256,886 max=2,709 min=1,841 avg=2,675
+        24: data copyout transfers: 48
+             device time(us): total=121,735 max=2,556 min=1,752 avg=2,536
+[2021-07-10 20:36.36] ~/Workshop/2021HPC/parprog/solution/saxpy
+[alp514.hawk-b624](1003): NV_ACC_TIME=1 ./saxpyc_acc-nodata
+SAXPY Time: 3.984324
+
+Accelerator Kernel Timing data
+/home/alp514/Workshop/2021HPC/parprog/solution/saxpy/saxpy_acc-nodata.c
+  main  NVIDIA  devicenum=0
+    time(us): 1,277,749
+    16: compute region reached 1 time
+        16: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=14,513 max=14,513 min=14,513 avg=14,513
+            elapsed time(us): total=14,561 max=14,561 min=14,561 avg=14,561
+    16: data region reached 2 times
+        19: data copyout transfers: 192
+             device time(us): total=487,132 max=2,559 min=946 avg=2,537
+    22: compute region reached 1 time
+        22: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=19,484 max=19,484 min=19,484 avg=19,484
+            elapsed time(us): total=19,518 max=19,518 min=19,518 avg=19,518
+    22: data region reached 2 times
+        22: data copyin transfers: 192
+             device time(us): total=513,260 max=2,713 min=993 avg=2,673
+        24: data copyout transfers: 96
+             device time(us): total=243,360 max=2,556 min=944 avg=2,535

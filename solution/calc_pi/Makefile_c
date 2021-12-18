@@ -1,0 +1,40 @@
+ifeq ($(COMP),gnu)
+	CC = gcc
+	FC = gfortran
+	MPICC = mpicc
+	MPIF90 = mpif90
+	CFLAGS =
+	OFLAGS = -fopenmp $(CFLAGS)
+	BIN = pic pic_omp pic_ompr pic_mpi
+else ifeq ($(COMP),intel)
+	CC = icc
+	FC = ifort
+	MPICC = mpicc
+	MPIF90 = mpif90
+	CFLAGS =
+	OFLAGS = -qopenmp $(CFLAGS)
+	BIN = pic pic_omp pic_ompr pic_mpi
+else
+	CC = nvc
+	FC = nvfortran
+	MPICC = mpicc
+	MPIF90 = mpif90
+	CFLAGS =
+	OFLAGS = -mp $(CFLAGS)
+	AFLAGS = -acc -gpu=cc75 -Minfo=accel $(CFLAGS)
+	BIN = pic pic_omp pic_ompr pic_acc pic_mpi
+endif
+
+all: $(BIN)
+pic:
+	$(CC) $(CFLAGS) -o pic pi_serial.c
+pic_omp:
+	$(CC) $(OFLAGS) -o pic_omp pi_omp.c
+pic_ompr:
+	$(CC) $(OFLAGS) -o pic_ompr pi_ompr.c
+pic_acc:
+	$(CC) $(AFLAGS) -o pic_acc pi_acc.c
+pic_mpi:
+	$(MPICC) $(CFLAGS) -o pic_mpi pi_mpi.c
+clean:
+	rm -rf *~ $(BIN)

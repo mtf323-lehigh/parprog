@@ -1,0 +1,38 @@
+SAXPY Time: 0.019030
+
+Accelerator Kernel Timing data
+/home/alp514/Workshop/2021HPC/parprog/solution/saxpy/saxpy_acc.c
+  main  NVIDIA  devicenum=0
+    time(us): 33,526
+    15: data region reached 2 times
+        15: data copyin transfers: 1
+             device time(us): total=5 max=5 min=5 avg=5
+    17: compute region reached 1 time
+        17: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=14,512 max=14,512 min=14,512 avg=14,512
+            elapsed time(us): total=14,550 max=14,550 min=14,550 avg=14,550
+    24: compute region reached 1 time
+        24: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=19,009 max=19,009 min=19,009 avg=19,009
+            elapsed time(us): total=19,027 max=19,027 min=19,027 avg=19,027
+SAXPY Time: 0.009620
+
+Accelerator Kernel Timing data
+/home/alp514/Workshop/2021HPC/parprog/solution/saxpy/saxpy_acc.f90
+  saxpy  NVIDIA  devicenum=0
+    time(us): 17,441
+    10: data region reached 2 times
+        10: data copyin transfers: 1
+             device time(us): total=5 max=5 min=5 avg=5
+    12: compute region reached 1 time
+        12: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=7,837 max=7,837 min=7,837 avg=7,837
+            elapsed time(us): total=7,880 max=7,880 min=7,880 avg=7,880
+    21: compute region reached 1 time
+        21: kernel launched 1 time
+            grid: [65535]  block: [128]
+             device time(us): total=9,599 max=9,599 min=9,599 avg=9,599
+            elapsed time(us): total=9,616 max=9,616 min=9,616 avg=9,616

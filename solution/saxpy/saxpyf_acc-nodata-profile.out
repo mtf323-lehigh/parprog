@@ -1,0 +1,53 @@
+==2101376== NVPROF is profiling process 2101376, command: ./saxpyf_acc-nodata
+SAXPY Time: 0.535297
+==2101376== Profiling application: ./saxpyf_acc-nodata
+==2101376== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   57.07%  364.22ms       144  2.5293ms  1.7422ms  2.5558ms  [CUDA memcpy DtoH]
+                   40.20%  256.53ms        96  2.6722ms  1.8412ms  2.7022ms  [CUDA memcpy HtoD]
+                    1.50%  9.5560ms         1  9.5560ms  9.5560ms  9.5560ms  saxpy_20_gpu
+                    1.23%  7.8419ms         1  7.8419ms  7.8419ms  7.8419ms  saxpy_11_gpu
+      API calls:   62.11%  363.57ms       380  956.76us     778ns  2.5605ms  cuEventSynchronize
+                   28.45%  166.57ms         1  166.57ms  166.57ms  166.57ms  cuDevicePrimaryCtxRetain
+                    4.33%  25.341ms         5  5.0681ms  2.5375ms  9.5581ms  cuStreamSynchronize
+                    4.15%  24.288ms         1  24.288ms  24.288ms  24.288ms  cuMemHostAlloc
+                    0.24%  1.4306ms         3  476.87us  137.06us  653.65us  cuMemAlloc
+                    0.21%  1.2027ms       144  8.3510us  6.2580us  16.461us  cuMemcpyDtoHAsync
+                    0.17%  974.74us        96  10.153us  8.2890us  45.761us  cuMemcpyHtoDAsync
+                    0.16%  921.03us       382  2.4110us  1.4740us  6.6990us  cuEventRecord
+                    0.14%  841.09us         1  841.09us  841.09us  841.09us  cuMemAllocHost
+                    0.03%  146.44us         1  146.44us  146.44us  146.44us  cuModuleLoadDataEx
+                    0.01%  67.387us         2  33.693us  26.125us  41.262us  cuLaunchKernel
+                    0.00%  10.756us         1  10.756us  10.756us  10.756us  cuStreamCreate
+                    0.00%  9.4310us         4  2.3570us     524ns  3.7750us  cuEventCreate
+                    0.00%  2.7620us         2  1.3810us     770ns  1.9920us  cuPointerGetAttributes
+                    0.00%  1.8450us         1  1.8450us  1.8450us  1.8450us  cuDeviceGetPCIBusId
+                    0.00%  1.2180us         3     406ns     232ns     537ns  cuCtxSetCurrent
+                    0.00%  1.1740us         3     391ns     193ns     764ns  cuDeviceGetCount
+                    0.00%  1.0670us         5     213ns     156ns     301ns  cuDeviceGetAttribute
+                    0.00%     894ns         2     447ns     206ns     688ns  cuModuleGetFunction
+                    0.00%     683ns         2     341ns     162ns     521ns  cuDeviceGet
+                    0.00%     299ns         1     299ns     299ns     299ns  cuDeviceComputeCapability
+                    0.00%     288ns         1     288ns     288ns     288ns  cuCtxGetCurrent
+                    0.00%     207ns         1     207ns     207ns     207ns  cuDriverGetVersion
+ OpenACC (excl):   56.71%  725.07ms         1  725.07ms  725.07ms  725.07ms  acc_exit_data@saxpy_acc-nodata.f90:11
+                   21.13%  270.19ms         1  270.19ms  270.19ms  270.19ms  acc_enter_data@saxpy_acc-nodata.f90:20
+                   19.21%  245.62ms         1  245.62ms  245.62ms  245.62ms  acc_exit_data@saxpy_acc-nodata.f90:20
+                    0.97%  12.423ms         2  6.2114ms  2.8638ms  9.5590ms  acc_wait@saxpy_acc-nodata.f90:20
+                    0.61%  7.8451ms         1  7.8451ms  7.8451ms  7.8451ms  acc_wait@saxpy_acc-nodata.f90:11
+                    0.59%  7.5051ms         1  7.5051ms  7.5051ms  7.5051ms  acc_wait@saxpy_acc-nodata.f90:16
+                    0.41%  5.2147ms         1  5.2147ms  5.2147ms  5.2147ms  acc_wait@saxpy_acc-nodata.f90:24
+                    0.10%  1.3389ms         1  1.3389ms  1.3389ms  1.3389ms  acc_enter_data@saxpy_acc-nodata.f90:11
+                    0.10%  1.2907ms        96  13.445us  10.745us  33.029us  acc_enqueue_download@saxpy_acc-nodata.f90:16
+                    0.10%  1.2497ms        96  13.017us  10.760us  73.567us  acc_enqueue_upload@saxpy_acc-nodata.f90:20
+                    0.04%  534.78us        48  11.141us  9.6720us  14.243us  acc_enqueue_download@saxpy_acc-nodata.f90:24
+                    0.01%  177.67us         1  177.67us  177.67us  177.67us  acc_device_init@saxpy_acc-nodata.f90:11
+                    0.00%  52.571us         1  52.571us  52.571us  52.571us  acc_enqueue_launch@saxpy_acc-nodata.f90:20 (saxpy_20_gpu)
+                    0.00%  29.870us         1  29.870us  29.870us  29.870us  acc_enqueue_launch@saxpy_acc-nodata.f90:11 (saxpy_11_gpu)
+                    0.00%  8.7190us         1  8.7190us  8.7190us  8.7190us  acc_compute_construct@saxpy_acc-nodata.f90:11
+                    0.00%  4.2560us         1  4.2560us  4.2560us  4.2560us  acc_compute_construct@saxpy_acc-nodata.f90:20
+                    0.00%       0ns         2       0ns       0ns       0ns  acc_create@saxpy_acc-nodata.f90:11
+                    0.00%       0ns         2       0ns       0ns       0ns  acc_delete@saxpy_acc-nodata.f90:24
+                    0.00%       0ns         2       0ns       0ns       0ns  acc_create@saxpy_acc-nodata.f90:20
+                    0.00%       0ns         2       0ns       0ns       0ns  acc_delete@saxpy_acc-nodata.f90:16
+                    0.00%       0ns         2       0ns       0ns       0ns  acc_alloc@saxpy_acc-nodata.f90:11

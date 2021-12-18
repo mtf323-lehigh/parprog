@@ -1,0 +1,32 @@
+ifeq ($(COMP),gnu)
+	CC = gcc
+	FC = gfortran
+	CFLAGS =
+	OFLAGS = -fopenmp $(CFLAGS)
+	BIN = saxpyf
+else ifeq ($(COMP),intel)
+	CC = icc
+	FC = ifort
+	CFLAGS =
+	OFLAGS = -qopenmp $(CFLAGS)
+	BIN = saxpyf
+else
+	CC = nvc
+	FC = nvfortran
+	CFLAGS =
+	OFLAGS = -mp $(CFLAGS)
+	AFLAGS = -acc -Minfo=accel -gpu=cc75 $(CFLAGS) 
+	BIN = saxpyf
+endif
+
+all: $(BIN)
+saxpyf:
+	$(FC) $(CFLAGS) -o saxpyf saxpy.f90
+saxpyf_omp:
+	$(FC) $(OFLAGS) -o saxpyf_omp saxpy_omp.f90
+saxpyf_acc:
+	$(FC) $(AFLAGS) -o saxpyf_acc saxpy_acc.f90
+saxpyf_cuda:
+	$(FC) $(CFLAGS) -o saxpyf_cuda saxpy.cuf
+clean:
+	rm -rf $(BIN) *~

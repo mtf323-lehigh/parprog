@@ -1,0 +1,40 @@
+==2101674== NVPROF is profiling process 2101674, command: ./saxpyf_acc
+SAXPY Time: 0.009612
+==2101674== Profiling application: ./saxpyf_acc
+==2101674== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   55.02%  9.5982ms         1  9.5982ms  9.5982ms  9.5982ms  saxpy_21_gpu
+                   44.97%  7.8435ms         1  7.8435ms  7.8435ms  7.8435ms  saxpy_12_gpu
+                    0.01%  1.7280us         1  1.7280us  1.7280us  1.7280us  [CUDA memset]
+      API calls:   89.27%  165.72ms         1  165.72ms  165.72ms  165.72ms  cuDevicePrimaryCtxRetain
+                    9.40%  17.449ms         3  5.8165ms  3.3600us  9.6003ms  cuStreamSynchronize
+                    0.77%  1.4362ms         4  359.04us  6.0590us  649.96us  cuMemAlloc
+                    0.46%  849.37us         1  849.37us  849.37us  849.37us  cuMemAllocHost
+                    0.07%  130.08us         1  130.08us  130.08us  130.08us  cuModuleLoadDataEx
+                    0.02%  30.177us         2  15.088us  6.8020us  23.375us  cuLaunchKernel
+                    0.01%  9.8730us         1  9.8730us  9.8730us  9.8730us  cuStreamCreate
+                    0.00%  9.0350us         1  9.0350us  9.0350us  9.0350us  cuMemsetD32Async
+                    0.00%  2.8080us         3     936ns     455ns  1.5540us  cuPointerGetAttributes
+                    0.00%  2.6870us         1  2.6870us  2.6870us  2.6870us  cuDeviceGetPCIBusId
+                    0.00%  1.2140us         3     404ns     213ns     596ns  cuCtxSetCurrent
+                    0.00%  1.1230us         3     374ns     172ns     769ns  cuDeviceGetCount
+                    0.00%     975ns         5     195ns     146ns     265ns  cuDeviceGetAttribute
+                    0.00%     890ns         2     445ns     237ns     653ns  cuModuleGetFunction
+                    0.00%     601ns         1     601ns     601ns     601ns  cuDeviceComputeCapability
+                    0.00%     539ns         2     269ns     153ns     386ns  cuDeviceGet
+                    0.00%     250ns         1     250ns     250ns     250ns  cuCtxGetCurrent
+                    0.00%     183ns         1     183ns     183ns     183ns  cuDriverGetVersion
+ OpenACC (excl):   50.40%  9.6011ms         1  9.6011ms  9.6011ms  9.6011ms  acc_wait@saxpy_acc.f90:21
+                   41.19%  7.8466ms         1  7.8466ms  7.8466ms  7.8466ms  acc_wait@saxpy_acc.f90:12
+                    7.17%  1.3666ms         1  1.3666ms  1.3666ms  1.3666ms  acc_enter_data@saxpy_acc.f90:10
+                    0.81%  155.14us         1  155.14us  155.14us  155.14us  acc_device_init@saxpy_acc.f90:10
+                    0.14%  26.897us         1  26.897us  26.897us  26.897us  acc_enqueue_launch@saxpy_acc.f90:12 (saxpy_12_gpu)
+                    0.08%  15.185us         1  15.185us  15.185us  15.185us  acc_exit_data@saxpy_acc.f90:10
+                    0.08%  15.074us         1  15.074us  15.074us  15.074us  acc_enqueue_upload@saxpy_acc.f90:10
+                    0.04%  8.3050us         1  8.3050us  8.3050us  8.3050us  acc_enqueue_launch@saxpy_acc.f90:21 (saxpy_21_gpu)
+                    0.04%  6.9160us         1  6.9160us  6.9160us  6.9160us  acc_compute_construct@saxpy_acc.f90:12
+                    0.03%  5.1320us         1  5.1320us  5.1320us  5.1320us  acc_wait@saxpy_acc.f90:10
+                    0.01%  1.7750us         1  1.7750us  1.7750us  1.7750us  acc_compute_construct@saxpy_acc.f90:21
+                    0.00%       0ns         3       0ns       0ns       0ns  acc_create@saxpy_acc.f90:10
+                    0.00%       0ns         3       0ns       0ns       0ns  acc_delete@saxpy_acc.f90:27
+                    0.00%       0ns         3       0ns       0ns       0ns  acc_alloc@saxpy_acc.f90:10
